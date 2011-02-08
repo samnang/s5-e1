@@ -5,6 +5,7 @@ require 'rspec'
 require 'sinatra'
 require 'rack/test'
 require 'application'
+require 'geo_ip'
 
 set :environment, :test
 set :run, false
