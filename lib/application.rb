@@ -32,6 +32,9 @@ class Application < Sinatra::Base
     geo_weather['weather']['wind_condition'] = weather.wind_condition
 
     geo_weather.to_json
+
+  rescue
+    {:status => "There is something wrong in preventing us from getting information of your location. You could try to pass another ip instead."}.to_json
   end
 
   def geo_location
