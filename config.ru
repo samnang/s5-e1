@@ -1,3 +1,5 @@
-require File.join(File.dirname(__FILE__), 'lib', 'application')
+$:.unshift File.expand_path('../lib', __FILE__)
+
+require 'application'
 
 run Application.new

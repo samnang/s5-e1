@@ -1,0 +1,17 @@
+{
+  "ip": "127.0.0.1",
+  "timestamp": 1297213092185,
+  "location": {
+    "coords": {
+      "latitude": "11.55",
+      "longitude": "104.917"
+    },
+    "address": {
+      "city": "Phnom Penh",
+      "country": "Cambodia",
+      "country_code": "KH"
+    },
+    "gmtOffset": "7",
+    "dstOffset": "7"
+  }
+}
