@@ -13,6 +13,12 @@ describe Application do
       last_response.ok?.should == true
     end
 
+    it "should reponse sucess when passing ip param" do
+      get "/", :ip => "127.0.0.1"
+
+      last_response.ok?.should == true
+    end
+
     it "should reponse location & weather of request ip" do
       get "/"
 

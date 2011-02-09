@@ -32,8 +32,6 @@ class Application < Sinatra::Base
     geo_weather['weather']['wind_condition'] = weather.wind_condition
 
     geo_weather.to_json
-  rescue StandardError => e
-    puts e
   end
 
   def geo_location
