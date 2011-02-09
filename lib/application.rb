@@ -10,11 +10,11 @@ class Application < Sinatra::Base
   get '/' do
     content_type :json
 
-    reponse_geo_weather
+    response_geo_weather
   end
 
   private
-  def reponse_geo_weather
+  def response_geo_weather
     geo_weather = Hash.new {|h, k| h[k] = {}}
 
     geo_weather['ip'] = geo_location.ip

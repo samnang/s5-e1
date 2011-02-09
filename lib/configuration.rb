@@ -4,7 +4,7 @@ class Application < Sinatra::Base
   end
 
   configure :production do
-    
+
   end
 
   configure :development do
