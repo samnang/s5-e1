@@ -7,7 +7,7 @@ describe GeoWeather::Client do
 
   shared_examples_for "all requests" do
     it "should return geo weather information" do
-      geo_weather.ip.should == "175.100.127.69"
+      geo_weather.ip.should == "123.108.254.143"
       geo_weather.location.city.should == "Phnom Penh"
       geo_weather.location.country.should == "Cambodia"
 
