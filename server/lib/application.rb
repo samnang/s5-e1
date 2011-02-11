@@ -3,7 +3,7 @@ require 'json'
 require 'httparty'
 
 require 'configuration.rb'
-require 'geo_location'
+require 'location'
 require 'weather'
 
 class Application < Sinatra::Base
@@ -38,7 +38,7 @@ class Application < Sinatra::Base
   end
 
   def geo_location
-    @geo_location ||= GeoWeather::GeoLocation.locate(request_ip)
+    @geo_location ||= GeoWeather::Location.locate(request_ip)
   end
 
   def weather

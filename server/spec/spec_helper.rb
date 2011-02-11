@@ -8,7 +8,7 @@ require 'webmock/rspec'
 require 'crack'
 
 require 'application'
-require 'geo_location'
+require 'location'
 require 'weather'
 
 set :environment, :test
