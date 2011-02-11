@@ -16,6 +16,12 @@ class Application < Sinatra::Base
     response_geo_weather
   end
 
+  error 500 do
+    content_type :json
+
+    {:status => "There is something wrong in preventing us from getting information of your location. You could try to pass another ip instead."}.to_json
+  end
+
   private
   def response_geo_weather
     geo_weather = {}
@@ -24,9 +30,6 @@ class Application < Sinatra::Base
     geo_weather['weather']  = weather
 
     geo_weather.to_json
-
-  rescue StandardError => e
-    {:status => "There is something wrong in preventing us from getting information of your location. You could try to pass another ip instead."}.to_json
   end
 
   def location
