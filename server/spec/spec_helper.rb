@@ -23,7 +23,7 @@ module SpecHelper
 
   def stub_requests
     stub_request(:get, "http://geoip.prototypeapp.com/api/locate?ip=127.0.0.1").
-      to_return(:body => load_fixture("geo_location.json"), :headers => { "Content-Type" => "application/json" })
+      to_return(:body => load_fixture("location.json"), :headers => { "Content-Type" => "application/json" })
 
     stub_request(:get, "http://www.google.com/ig/api?weather=Phnom%20Penh,%20Cambodia").
       to_return(:body => load_fixture("weather.xml"), :headers => { "Content-Type" => "text/xml" })

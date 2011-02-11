@@ -1,6 +1,6 @@
 require 'rspec'
 require 'webmock/rspec'
-require_relative 'geo_weather_client'
+require_relative '../lib/geo_weather_client'
 
 module SpecHelper
   def stub_requests

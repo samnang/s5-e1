@@ -7,10 +7,10 @@ describe GeoWeather::Location do
 
       location = GeoWeather::Location.locate('127.0.0.1')
  
-      location.latitude.should == "11.55"
-      location.city.should == "Phnom Penh"
-      location.country.should == "Cambodia"
-      location.gmt_offset.should == "7"
+      location['latitude'].should == "11.55"
+      location['city'].should == "Phnom Penh"
+      location['country'].should == "Cambodia"
+      location['gmt_offset'].should == "7"
     end
   end
 end

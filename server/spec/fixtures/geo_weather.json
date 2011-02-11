@@ -1,19 +1,19 @@
 {
-  "ip": "123.108.254.143",
-  "current_date_time": "2011-02-09 00:00:00 +0000",
   "location": {
+    "ip": "123.108.254.143",
     "latitude": "11.55",
     "longitude": "104.917",
     "city": "Phnom Penh",
     "country": "Cambodia",
     "country_code": "KH",
-    "gmt_offset": "7",
+    "gmt_offset": "7"
   },
   "weather": {
+    "current_date_time": "2011-02-09 00:00:00 +0000",
     "condition": "Haze",
     "temp_f": "75",
     "temp_c": "24",
     "humidity": "Humidity: 83%",
-    "wind_condition": "Wind: SE at 6 mph",
-  },
+    "wind_condition": "Wind: SE at 6 mph"
+  }
 }
