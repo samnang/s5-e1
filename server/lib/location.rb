@@ -2,10 +2,10 @@ module GeoWeather
   module Location
     extend self
 
-    GeoIP_URI = "http://geoip.prototypeapp.com/api/locate?ip="
+    GEOIP_URI = "http://geoip.prototypeapp.com/api/locate?ip="
 
     def locate(ip)
-      location_data = HTTParty.get(GeoIP_URI + ip)['location']
+      location_data = HTTParty.get(GEOIP_URI + ip)['location']
 
       location = {}
       location['ip']           = ip
