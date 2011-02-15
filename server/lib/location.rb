@@ -4,7 +4,7 @@ module GeoWeather
 
     GEOIP_URI = "http://geoip.prototypeapp.com/api/locate?ip="
 
-    def locate(ip)
+    def for(ip)
       location_data = HTTParty.get(GEOIP_URI + ip)['location']
 
       location = {}

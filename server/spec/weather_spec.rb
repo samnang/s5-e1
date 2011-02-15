@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 describe GeoWeather::Weather do
-  describe ".weather_at(location)" do
+  describe ".in(location)" do
     it "should return weather information" do
       stub_requests
 
-      weather = GeoWeather::Weather.weather_at("Phnom Penh, Cambodia")
+      weather = GeoWeather::Weather.in("Phnom Penh, Cambodia")
  
       weather['temp_f'].should == "75"
       weather['temp_c'].should == "24"

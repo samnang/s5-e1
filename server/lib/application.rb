@@ -2,14 +2,10 @@ require 'sinatra/base'
 require 'json'
 require 'httparty'
 
-require 'configuration.rb'
-require 'location'
-require 'weather'
+require 'configuration'
+require 'geo_weather'
 
 class Application < Sinatra::Base
-  include GeoWeather::Weather
-  include GeoWeather::Location
-
   get '/' do
     content_type :json
 
@@ -26,18 +22,11 @@ class Application < Sinatra::Base
   def response_geo_weather
     geo_weather = {}
 
+    location = GeoWeather.location_for(request_ip)
     geo_weather['location'] = location
-    geo_weather['weather']  = weather
+    geo_weather['weather']  = GeoWeather.weather_in(location)
 
     geo_weather.to_json
-  end
-
-  def location
-    @location ||= locate(request_ip)
-  end
-
-  def weather
-    weather_at("#{location['city']}, #{location['country']}")
   end
 
   def request_ip

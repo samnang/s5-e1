@@ -4,7 +4,7 @@ module GeoWeather
 
     GOOGLE_WEATHER = "http://www.google.com/ig/api?weather="
 
-    def weather_at(location)
+    def in(location)
       uri = URI.escape(GOOGLE_WEATHER + location)
       weather_data = HTTParty.get(uri)['xml_api_reply']['weather']
 
